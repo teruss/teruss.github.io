@@ -2,29 +2,43 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>MIDI入力デモ</title>
+  <title>KossoRhythm MIDI Test</title>
   <style>
     body { font-family: sans-serif; padding: 2rem; }
-    #log { white-space: pre-wrap; background: #f3f3f3; padding: 1rem; border-radius: 5px; }
+    #log { white-space: pre-wrap; background: #f4f4f4; padding: 1rem; border-radius: 8px; }
   </style>
 </head>
 <body>
-  <h1>MIDIキーボード入力テスト</h1>
-  <p>MIDIキーボードを接続して、鍵盤を押すと下にイベントが表示されます。</p>
-  <div id="log">ログ出力待ち中...</div>
+  <h1>KossoRhythm MIDIキーボード接続テスト</h1>
+  <p>MIDIキーボードを接続して鍵盤を押すと、ここに入力が表示されます：</p>
+  <div id="log">MIDI入力待機中...</div>
 
   <script>
-    console.log("検出されたMIDI入力1414:");
+    const logArea = document.getElementById('log');
 
-navigator.requestMIDIAccess().then((midiAccess) => {
-    console.log("検出されたMIDI入力141524:");
-    console.log("検出されたMIDI入力14152wre4:", midiAccess);
-  for (const input of midiAccess.inputs.values()) {
-    console.log("検出されたMIDI入力:", input.name);
-  }
-});
+    const log = (text) => {
+      logArea.textContent += "\n" + text;
+    };
 
+    if (navigator.requestMIDIAccess) {
+      navigator.requestMIDIAccess().then((midiAccess) => {
+        if (midiAccess.inputs.size === 0) {
+          log("MIDIデバイスが検出されませんでした。キーボードが接続されていますか？");
+        }
 
-</script>
+        for (const input of midiAccess.inputs.values()) {
+          log(`接続済みデバイス: ${input.name}`);
+          input.onmidimessage = (message) => {
+            const [status, note, velocity] = message.data;
+            log(`ノート番号: ${note}、ベロシティ: ${velocity}`);
+          };
+        }
+      }, () => {
+        log("MIDIアクセスの取得に失敗しました。ブラウザの権限をご確認ください。");
+      });
+    } else {
+      log("このブラウザはMIDIに対応していません。ChromeまたはEdge最新版をご利用ください。");
+    }
+  </script>
 </body>
 </html>
