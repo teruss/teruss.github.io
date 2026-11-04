@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FluidCanvasのプライバシーポリシー。端末内の処理、PNGの保存・共有、データの保持と削除について説明します。">
+    <title>FluidCanvas プライバシーポリシー</title>
+    <link rel="stylesheet" href="privacy.css">
+    <link rel="alternate" hreflang="ja" href="./">
+    <link rel="alternate" hreflang="en" href="en.html">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+    <div class="page">
+      <header class="site-header">
+        <p class="brand">FluidCanvas</p>
+        <nav class="language-nav" aria-label="言語 / Language">
+          <a href="./" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+          <a href="en.html" lang="en" hreflang="en">English</a>
+        </nav>
+      </header>
+
+      <main id="main-content" tabindex="-1">
+        <header class="policy-header">
+          <h1>プライバシーポリシー</h1>
+          <p class="effective-date"><strong>適用開始日：</strong><time datetime="2026-11-03">2026年11月3日</time>（日本時間）</p>
+        </header>
+
+        <nav class="contents" aria-label="このページの内容">
+          <p><strong>このページの内容</strong></p>
+          <ol>
+            <li><a href="#scope">対象となるアプリ</a></li>
+            <li><a href="#on-device">端末内で取り扱う情報</a></li>
+            <li><a href="#save">PNGの保存</a></li>
+            <li><a href="#share">PNGの共有</a></li>
+            <li><a href="#retention">データの保持と削除</a></li>
+            <li><a href="#permissions">権限</a></li>
+            <li><a href="#services">外部サービスとこのウェブページ</a></li>
+            <li><a href="#changes">ポリシーの変更</a></li>
+            <li><a href="#contact">提供者・お問い合わせ</a></li>
+          </ol>
+        </nav>
+
+        <section aria-labelledby="scope">
+          <h2 id="scope">1. 対象となるアプリ</h2>
+          <p>このポリシーは、Androidアプリ「FluidCanvas」（旧掲載名「PicselArt」）を対象とします。本番版のパッケージ名は <code>org.godotengine.picselart</code> です。</p>
+        </section>
+
+        <section aria-labelledby="on-device">
+          <h2 id="on-device">2. 端末内で取り扱う情報</h2>
+          <p>描画・シミュレーション、端末の傾き、衝突音、任意の振動に関する処理は、端末内で行います。</p>
+          <p>現在のアプリには、アカウント、広告、利用状況の解析機能はありません。描画やセンサー入力を端末外へ送る、開発者が運営するサービスもありません。</p>
+          <p>設定と、初回案内を閉じたことを示す記録は、アプリ専用のストレージに保存します。描画内容は動作中のシミュレーションであり、自動保存して後から開き直すプロジェクトではありません。</p>
+        </section>
+
+        <section aria-labelledby="save">
+          <h2 id="save">3. PNGの保存</h2>
+          <p>PNGの保存を選ぶと、Androidの保存先選択画面（ドキュメントピッカー）が開きます。アプリは、ユーザーが選んだ保存先にだけ画像を書き込みます。写真やストレージ全体へのアクセス権限は使用しません。</p>
+          <p>選択した保存先がクラウドのドキュメントプロバイダーの場合、そのサービスが独自のポリシーに従って画像を同期・アップロードすることがあります。</p>
+        </section>
+
+        <section aria-labelledby="share">
+          <h2 id="share">4. PNGの共有</h2>
+          <p>共有を選ぶと、アプリ専用のキャッシュに一時的なPNG画像を作成し、Androidの共有先選択画面を開きます。選択した受信側アプリには、その画像を読み取るためのアクセス権が渡されます。</p>
+          <p>送信するかどうか、どこへ送信するかはユーザーが選びます。受信側のアプリやサービスでの保存・送信・削除は、そのアプリやサービスの仕組みとポリシーに従います。</p>
+          <p><strong>共有先選択画面を閉じたことは、画像が相手に届いたことの確認にはなりません。</strong></p>
+        </section>
+
+        <section aria-labelledby="retention">
+          <h2 id="retention">5. データの保持と削除</h2>
+          <ul>
+            <li><strong>設定：</strong>設定を変更するか、アプリのローカルデータを削除するまで保持します。設定を初期値に戻しても、初回案内を閉じた記録は意図的に保持します。</li>
+            <li><strong>共有用キャッシュ：</strong>作成から24時間を超えた共有用PNGは、次に共有を行ったときに削除します。24時間ちょうどに自動実行される削除ではありません。Androidがそれより早くキャッシュを削除することもあります。</li>
+            <li><strong>端末内のアプリデータ：</strong>アプリのストレージ（データ）の消去、またはアンインストールにより、端末内の設定とキャッシュが削除されます。</li>
+            <li><strong>保存・共有済みの画像：</strong>アプリデータの消去やアンインストールでは、保存先に書き出したファイルや、他のアプリ・サービスに送ったコピーは削除されません。削除するには、それぞれの保存先や受信側の機能を使ってください。</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="permissions">
+          <h2 id="permissions">6. 権限</h2>
+          <p>任意の振動機能には、Androidのバイブレーション権限を使用します。</p>
+          <p>描画には、位置情報、連絡先、カメラ、マイク、写真ライブラリやストレージ全体へのアクセスは必要ありません。PNGの保存・共有には、前述のAndroidのファイル選択・共有の仕組みを使います。</p>
+        </section>
+
+        <section aria-labelledby="services">
+          <h2 id="services">7. 外部サービスとこのウェブページ</h2>
+          <p>Android、Google Play、選択したドキュメントプロバイダー、共有先のアプリによる情報の取り扱いは、ここで説明するアプリ内の処理とは別です。それぞれのサービスのプライバシーポリシーもご確認ください。</p>
+          <p>このポリシーページのGitHub Pagesでのホスティングは、アプリの動作とは別です。GitHubの<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" hreflang="en">GitHub Pagesに関する説明（英語）</a>によると、訪問者のIPアドレスはセキュリティ目的で記録・保存されます。詳細は<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" hreflang="en">GitHubプライバシーステートメント（英語）</a>をご確認ください。このホスティングに伴う取り扱いは、アプリ内の情報処理とは異なります。</p>
+          <p>このページには、アクセス解析、外部配信フォント、第三者のスクリプトを追加していません。</p>
+        </section>
+
+        <section aria-labelledby="changes">
+          <h2 id="changes">8. ポリシーの変更</h2>
+          <p>このポリシーは、現在のアプリの動作を説明するものです。機能や情報の取り扱いに変更がある場合、このページを更新します。公開時および改定時に適用開始日を明示します。</p>
+        </section>
+
+        <section class="contact" aria-labelledby="contact">
+          <h2 id="contact">9. 提供者・お問い合わせ</h2>
+          <p>プライバシーに関するご質問は、以下の連絡先へお寄せください。</p>
+          <address>
+            <p><strong>提供者：</strong>Teruyoshi Sasaki</p>
+            <p><strong>プライバシーに関する連絡先：</strong><a href="mailto:teruyoshi.sasaki@gmail.com">teruyoshi.sasaki@gmail.com</a></p>
+          </address>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
