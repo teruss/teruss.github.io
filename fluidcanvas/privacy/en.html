@@ -23,7 +23,7 @@
       <main id="main-content" tabindex="-1">
         <header class="policy-header">
           <h1>Privacy Policy</h1>
-          <p class="effective-date"><strong>Effective date:</strong> <time datetime="2026-11-03">November 3, 2026</time> (Japan Standard Time).</p>
+          <p class="effective-date"><strong>Effective date:</strong> <time datetime="2026-11-20">November 20, 2026</time> (Japan Standard Time).</p>
         </header>
 
         <nav class="contents" aria-label="On this page">
@@ -50,7 +50,7 @@
           <h2 id="on-device">2. Information handled on your device</h2>
           <p>Drawing and simulation, device tilt, collision audio and optional vibration are processed on your device.</p>
           <p>The current app does not provide accounts, advertising or analytics. There is no developer-operated service that sends drawings or sensor input off the device.</p>
-          <p>Preferences and the record that you dismissed the welcome hint are stored in app-private storage. Your drawing is a live simulation, not an automatically saved project that you can reopen later.</p>
+          <p>Preferences, the record that you dismissed the welcome hint, and the canvas you were drawing are stored in app-private storage. Unless you turn off "Reopen the last canvas at launch", the canvas and its material are saved when you leave or close the app and reopened at the next launch. They are not sent off the device or included in Android backups.</p>
         </section>
 
         <section aria-labelledby="save">
@@ -70,8 +70,9 @@
           <h2 id="retention">5. Data retention and deletion</h2>
           <ul>
             <li><strong>Preferences:</strong> Settings persist until you change them or remove the app's local data. Restoring settings defaults intentionally preserves the record that you dismissed the welcome hint.</li>
+            <li><strong>Saved canvas:</strong> The last canvas is kept until the next save replaces it, you turn off "Reopen the last canvas at launch", or you remove the app's local data.</li>
             <li><strong>Sharing cache:</strong> Shared cached PNGs older than 24 hours are pruned the next time you share. This is not a scheduled deletion at the 24-hour mark. Android may clear the cache earlier.</li>
-            <li><strong>Local app data:</strong> Clearing the app's storage (data) or uninstalling it removes its local settings and cache.</li>
+            <li><strong>Local app data:</strong> Clearing the app's storage (data) or uninstalling it removes its local settings, saved canvas and cache.</li>
             <li><strong>Saved or shared images:</strong> Clearing app data or uninstalling does not delete exported files or copies sent to other apps or services. To delete those, use the relevant destination or receiving app's controls.</li>
           </ul>
         </section>
